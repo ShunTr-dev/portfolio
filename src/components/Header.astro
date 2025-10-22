@@ -1,0 +1,109 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-cyan-500/20">
+  <nav class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:scale-105 transition-transform">
+        Portfolio
+      </a>
+      
+      <ul class="hidden md:flex items-center gap-8">
+        <li>
+          <a 
+            href="/" 
+            class:list={[
+              "text-lg transition-all hover:text-cyan-400",
+              currentPath === "/" ? "text-cyan-400 font-semibold" : "text-gray-300"
+            ]}
+          >
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a 
+            href="/#about" 
+            class="text-lg text-gray-300 transition-all hover:text-cyan-400"
+          >
+            Sobre mí
+          </a>
+        </li>
+        <li>
+          <a 
+            href="/#experience" 
+            class="text-lg text-gray-300 transition-all hover:text-cyan-400"
+          >
+            Experiencia
+          </a>
+        </li>
+        <li>
+          <a 
+            href="/proyectos" 
+            class:list={[
+              "text-lg transition-all hover:text-cyan-400",
+              currentPath.startsWith("/proyectos") ? "text-cyan-400 font-semibold" : "text-gray-300"
+            ]}
+          >
+            Proyectos
+          </a>
+        </li>
+        <li>
+          <a 
+            href="/#contact" 
+            class="px-6 py-2 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105"
+          >
+            Contacto
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <ul class="flex flex-col gap-4">
+        <li>
+          <a href="/" class="block text-lg text-gray-300 hover:text-cyan-400 transition-colors">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/#about" class="block text-lg text-gray-300 hover:text-cyan-400 transition-colors">
+            Sobre mí
+          </a>
+        </li>
+        <li>
+          <a href="/#experience" class="block text-lg text-gray-300 hover:text-cyan-400 transition-colors">
+            Experiencia
+          </a>
+        </li>
+        <li>
+          <a href="/proyectos" class="block text-lg text-gray-300 hover:text-cyan-400 transition-colors">
+            Proyectos
+          </a>
+        </li>
+        <li>
+          <a href="/#contact" class="block text-lg text-cyan-400 font-semibold">
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

@@ -1,11 +1,259 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const skills = [
+  { name: 'HTML5', level: 95 },
+  { name: 'CSS3', level: 90 },
+  { name: 'JavaScript', level: 88 },
+  { name: 'React', level: 85 },
+  { name: 'Astro', level: 80 },
+  { name: 'Tailwind CSS', level: 92 },
+];
+
+const experience = [
+  {
+    role: 'Senior Front-End Developer',
+    company: 'Tech Solutions Inc.',
+    period: '2022 - Presente',
+    description: 'Desarrollo de aplicaciones web modernas utilizando React, Next.js y TypeScript. Liderazgo de equipo y mentoring de desarrolladores junior.',
+    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
+  },
+  {
+    role: 'Front-End Developer',
+    company: 'Digital Agency',
+    period: '2020 - 2022',
+    description: 'Creación de sitios web responsive y aplicaciones SPA. Colaboración con equipos de diseño y backend.',
+    technologies: ['Vue.js', 'JavaScript', 'SASS', 'Webpack']
+  },
+  {
+    role: 'Junior Web Developer',
+    company: 'Startup Innovations',
+    period: '2019 - 2020',
+    description: 'Desarrollo y mantenimiento de sitios web corporativos. Implementación de nuevas funcionalidades y optimización de rendimiento.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'jQuery']
+  }
+];
+
+const education = [
+  {
+    title: 'Máster en Desarrollo Web Full Stack',
+    institution: 'Universidad Tecnológica',
+    year: '2019',
+    description: 'Especialización en arquitecturas modernas de frontend y backend.'
+  },
+  {
+    title: 'Grado en Ingeniería Informática',
+    institution: 'Universidad de Ciencias',
+    year: '2017',
+    description: 'Formación completa en fundamentos de programación y desarrollo software.'
+  },
+  {
+    title: 'Certificación React Professional',
+    institution: 'React Training',
+    year: '2021',
+    description: 'Certificación oficial en desarrollo avanzado con React y ecosistema.'
+  }
+];
+
+const EMAIL = import.meta.env.EMAIL || 'email@example.com';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Portfolio - Desarrollador Front-End">
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="container mx-auto px-6 z-10">
+      <div class="text-center">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent animate-glow">
+          Hola, soy Desarrollador
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
+          Creo experiencias web inmersivas y modernas que combinan diseño atrevido con código limpio
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a 
+            href="/proyectos" 
+            class="px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105"
+          >
+            Ver Proyectos
+          </a>
+          <a 
+            href="#contact" 
+            class="px-8 py-4 border-2 border-cyan-500 rounded-full text-cyan-400 font-semibold hover:bg-cyan-500/10 transition-all hover:scale-105"
+          >
+            Contactar
+          </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="mt-16 animate-bounce">
+          <svg class="w-6 h-6 mx-auto text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 relative">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h2 class="text-5xl font-bold mb-6 bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            Sobre Mí
+          </h2>
+          <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+            Soy un desarrollador front-end apasionado con más de 5 años de experiencia creando aplicaciones web modernas y escalables. Me especializo en tecnologías como React, Astro y Tailwind CSS.
+          </p>
+          <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+            Mi enfoque está en crear interfaces de usuario intuitivas y atractivas que no solo se vean bien, sino que también ofrezcan una experiencia de usuario excepcional. Me encanta estar al día con las últimas tendencias y tecnologías del desarrollo web.
+          </p>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            Cuando no estoy programando, disfruto contribuyendo a proyectos de código abierto, escribiendo artículos técnicos y explorando nuevas herramientas de desarrollo.
+          </p>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="relative">
+            <div class="absolute inset-0 bg-linear-to-r from-cyan-500 to-purple-600 rounded-2xl blur-xl opacity-50"></div>
+            <img 
+              src="https://placehold.co/600x600/1a1a1a/06b6d4?text=Profile" 
+              alt="Profile" 
+              class="relative rounded-2xl w-full shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="mt-20">
+        <h3 class="text-3xl font-bold mb-8 text-center text-white">Habilidades Técnicas</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          {skills.map(skill => (
+            <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/20">
+              <div class="flex justify-between mb-2">
+                <span class="text-white font-semibold">{skill.name}</span>
+                <span class="text-cyan-400">{skill.level}%</span>
+              </div>
+              <div class="h-3 bg-gray-800 rounded-full overflow-hidden">
+                <div 
+                  class="h-full bg-linear-to-r from-cyan-500 to-purple-600 rounded-full transition-all duration-1000"
+                  style={`width: ${skill.level}%`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 bg-gray-900/30">
+    <div class="container mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-12 text-center bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+        Experiencia Profesional
+      </h2>
+      
+      <div class="max-w-4xl mx-auto space-y-8">
+        {experience.map((job, index) => (
+          <div class="relative pl-8 border-l-2 border-cyan-500/50 hover:border-cyan-500 transition-colors">
+            <div class="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-cyan-500 rounded-full animate-glow"></div>
+            <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/20 card-hover">
+              <div class="flex flex-wrap justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-white mb-1">{job.role}</h3>
+                  <p class="text-cyan-400 font-semibold">{job.company}</p>
+                </div>
+                <span class="text-gray-400 text-sm">{job.period}</span>
+              </div>
+              <p class="text-gray-400 mb-4">{job.description}</p>
+              <div class="flex flex-wrap gap-2">
+                {job.technologies.map(tech => (
+                  <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-12 text-center bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+        Formación y Certificaciones
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        {education.map(edu => (
+          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/20 card-hover">
+            <div class="mb-4">
+              <div class="w-12 h-12 bg-linear-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">{edu.title}</h3>
+              <p class="text-cyan-400 font-semibold mb-1">{edu.institution}</p>
+              <p class="text-gray-500 text-sm mb-3">{edu.year}</p>
+            </div>
+            <p class="text-gray-400 text-sm">{edu.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-900/30">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-6 bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          ¿Hablamos?
+        </h2>
+        <p class="text-gray-400 text-xl mb-12">
+          Estoy siempre abierto a nuevos proyectos y oportunidades. ¡Conectemos!
+        </p>
+        
+        <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-500/20">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="text-left">
+              <h3 class="text-2xl font-bold text-white mb-4">Información de Contacto</h3>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                    <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <span class="text-gray-400">{EMAIL}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-center">
+              <a 
+                href={`mailto:${EMAIL}`}
+                class="px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105 inline-block"
+              >
+                Enviar Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
