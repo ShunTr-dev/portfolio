@@ -1,68 +1,52 @@
 # 🚀 Portfolio Moderno - Astro + Tailwind CSS# 🚀 Portfolio Moderno - Astro + Tailwind CSS
 
-
-
 Portfolio profesional con diseño atrevido, tema oscuro y experiencia inmersiva.Portfolio profesional con diseño atrevido, tema oscuro y experiencia inmersiva.
-
-
 
 ## ✨ Características## ✨ Características
 
+-   🎨 **Diseño Moderno**: Tema oscuro con gradientes cyan y purple- 🎨 **Diseño Moderno**: Tema oscuro con gradientes cyan y purple
 
+-   🚀 **Rendimiento**: Construido con Astro para máxima velocidad- 🚀 **Rendimiento**: Construido con Astro para máxima velocidad
 
-- 🎨 **Diseño Moderno**: Tema oscuro con gradientes cyan y purple- 🎨 **Diseño Moderno**: Tema oscuro con gradientes cyan y purple
+-   📱 **Responsive**: Funciona perfectamente en todos los dispositivos- 📱 **Responsive**: Funciona perfectamente en todos los dispositivos
 
-- 🚀 **Rendimiento**: Construido con Astro para máxima velocidad- 🚀 **Rendimiento**: Construido con Astro para máxima velocidad
+-   🎯 **SEO Optimizado**: Meta tags y estructura semántica- 🎯 **SEO Optimizado**: Meta tags y estructura semántica
 
-- 📱 **Responsive**: Funciona perfectamente en todos los dispositivos- 📱 **Responsive**: Funciona perfectamente en todos los dispositivos
+-   💼 **Secciones Completas**: - 💼 **Secciones Completas**:
 
-- 🎯 **SEO Optimizado**: Meta tags y estructura semántica- 🎯 **SEO Optimizado**: Meta tags y estructura semántica
+    -   Hero con animaciones - Hero con animaciones
 
-- 💼 **Secciones Completas**: - 💼 **Secciones Completas**: 
+    -   Sobre mí con habilidades técnicas - Sobre mí con habilidades técnicas
 
-  - Hero con animaciones  - Hero con animaciones
+    -   Experiencia profesional timeline - Experiencia profesional timeline
 
-  - Sobre mí con habilidades técnicas  - Sobre mí con habilidades técnicas
+    -   Formación y certificaciones - Formación y certificaciones
 
-  - Experiencia profesional timeline  - Experiencia profesional timeline
+    -   Galería de proyectos - Galería de proyectos
 
-  - Formación y certificaciones  - Formación y certificaciones
+    -   Páginas individuales de proyectos - Páginas individuales de proyectos
 
-  - Galería de proyectos  - Galería de proyectos
-
-  - Páginas individuales de proyectos  - Páginas individuales de proyectos
-
-  - Contacto  - Contacto
-
-
+    -   Contacto - Contacto
 
 ## 🛠️ Tecnologías## �️ Tecnologías
 
+-   [Astro 5](https://astro.build) - Framework web moderno- [Astro 5](https://astro.build) - Framework web moderno
 
+-   [Tailwind CSS 4](https://tailwindcss.com) - Framework CSS utility-first- [Tailwind CSS 4](https://tailwindcss.com) - Framework CSS utility-first
 
-- [Astro 5](https://astro.build) - Framework web moderno- [Astro 5](https://astro.build) - Framework web moderno
-
-- [Tailwind CSS 4](https://tailwindcss.com) - Framework CSS utility-first- [Tailwind CSS 4](https://tailwindcss.com) - Framework CSS utility-first
-
-- TypeScript - Tipado estático- TypeScript - Tipado estático
-
-
+-   TypeScript - Tipado estático- TypeScript - Tipado estático
 
 ## 📦 Instalación## 📦 Instalación
-
-
 
 1. Clona el repositorio1. Clona el repositorio
 
 2. Instala las dependencias:2. Instala las dependencias:
 
-
-
-```bash```bash
+`bash`bash
 
 npm installnpm install
 
-``````
+````
 
 
 
@@ -82,23 +66,17 @@ EMAIL=tu.email@example.comEMAIL=tu.email@example.com
 
 LINKEDIN_URL=https://www.linkedin.com/in/tu-perfilLINKEDIN_URL=https://www.linkedin.com/in/tu-perfil
 
-``````
-
-
+````
 
 ## 🚀 Uso## 🚀 Uso
 
-
-
 ### Desarrollo### Desarrollo
 
-
-
-```bash```bash
+`bash`bash
 
 npm run devnpm run dev
 
-``````
+````
 
 
 
@@ -114,19 +92,15 @@ El sitio estará disponible en `http://localhost:4321`El sitio estará disponibl
 
 npm run buildnpm run build
 
-``````
-
-
+````
 
 ### Preview### Preview
 
-
-
-```bash```bash
+`bash`bash
 
 npm run previewnpm run preview
 
-``````
+````
 
 
 
@@ -227,3 +201,4 @@ MIT
 ## 🤝 Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue o pull request.
+````

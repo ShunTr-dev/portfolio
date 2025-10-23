@@ -1,419 +1,249 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro'
+import { projects } from '../../data/projects.js'
+import Contact from '../../components/contact.astro'
 
 export function getStaticPaths() {
-  const projects = [
-    {
-      id: '1',
-      title: 'E-Commerce Platform',
-      description: 'Plataforma de comercio electrónico moderna con carrito de compras, pagos integrados y panel de administración.',
-      longDescription: 'Una plataforma completa de comercio electrónico desarrollada con tecnologías modernas. Incluye un sistema de gestión de productos, carrito de compras persistente, integración con Stripe para pagos seguros, y un panel de administración completo para gestionar pedidos, inventario y clientes.',
-      image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=E-Commerce+Platform',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Express', 'Redux'],
-      category: 'Full Stack',
-      demoUrl: 'https://demo.example.com',
-      githubUrl: 'https://github.com/example/ecommerce',
-      features: [
-        'Sistema de autenticación y autorización',
-        'Carrito de compras con persistencia',
-        'Integración de pagos con Stripe',
-        'Panel de administración completo',
-        'Gestión de inventario en tiempo real',
-        'Sistema de reseñas y calificaciones',
-        'Búsqueda y filtrado avanzado',
-        'Responsive design'
-      ],
-      challenges: [
-        'Implementación de un sistema de pagos seguro y escalable',
-        'Optimización de consultas de base de datos para gran volumen de productos',
-        'Gestión de estado compleja con Redux'
-      ],
-      gallery: [
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Screenshot+1',
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Screenshot+2',
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Screenshot+3'
-      ]
-    },
-    {
-      id: '2',
-      title: 'Dashboard Analytics',
-      description: 'Dashboard interactivo para visualización de datos con gráficos en tiempo real y filtros avanzados.',
-      longDescription: 'Dashboard de análisis empresarial que proporciona visualizaciones interactivas de datos en tiempo real. Permite a los usuarios analizar métricas clave, generar reportes personalizados y obtener insights valiosos a través de gráficos dinámicos y filtros avanzados.',
-      image: 'https://placehold.co/1200x600/1a1a1a/a855f7?text=Analytics+Dashboard',
-      technologies: ['Vue.js', 'D3.js', 'Tailwind CSS', 'Firebase', 'Chart.js'],
-      category: 'Front-End',
-      demoUrl: 'https://demo.example.com/dashboard',
-      githubUrl: 'https://github.com/example/dashboard',
-      features: [
-        'Visualizaciones de datos interactivas',
-        'Actualización de datos en tiempo real',
-        'Filtros y segmentación avanzada',
-        'Exportación de reportes en PDF',
-        'Dashboards personalizables',
-        'Widgets drag-and-drop',
-        'Modo oscuro/claro',
-        'Responsive en todos los dispositivos'
-      ],
-      challenges: [
-        'Optimización del rendimiento con grandes volúmenes de datos',
-        'Creación de visualizaciones personalizadas con D3.js',
-        'Implementación de actualizaciones en tiempo real sin afectar el rendimiento'
-      ],
-      gallery: [
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Dashboard+Main',
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Charts+View',
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Reports+View'
-      ]
-    },
-    {
-      id: '3',
-      title: 'Social Media App',
-      description: 'Red social con funcionalidades de posts, likes, comentarios y mensajería en tiempo real.',
-      longDescription: 'Red social completa que permite a los usuarios conectarse, compartir contenido y comunicarse en tiempo real. Incluye todas las funcionalidades esperadas de una plataforma social moderna, desde posts multimedia hasta mensajería instantánea.',
-      image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=Social+Media',
-      technologies: ['Next.js', 'Socket.io', 'PostgreSQL', 'Redis', 'TypeScript'],
-      category: 'Full Stack',
-      demoUrl: 'https://demo.example.com/social',
-      githubUrl: 'https://github.com/example/social',
-      features: [
-        'Perfiles de usuario personalizables',
-        'Sistema de posts con multimedia',
-        'Likes, comentarios y compartir',
-        'Mensajería en tiempo real',
-        'Notificaciones push',
-        'Sistema de seguimiento',
-        'Feed algorítmico personalizado',
-        'Historias de 24 horas'
-      ],
-      challenges: [
-        'Escalabilidad de mensajería en tiempo real con Socket.io',
-        'Optimización de consultas con millones de posts',
-        'Implementación de un algoritmo de feed personalizado'
-      ],
-      gallery: [
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Feed+View',
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Chat+Interface',
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Profile+Page'
-      ]
-    },
-    {
-      id: '4',
-      title: 'Weather Forecast App',
-      description: 'Aplicación del clima con pronósticos detallados, mapas interactivos y alertas meteorológicas.',
-      longDescription: 'Aplicación meteorológica avanzada que proporciona pronósticos precisos, visualizaciones de mapas interactivos y alertas en tiempo real. Utiliza APIs de datos meteorológicos profesionales para ofrecer información detallada y confiable.',
-      image: 'https://placehold.co/1200x600/1a1a1a/a855f7?text=Weather+App',
-      technologies: ['React', 'OpenWeather API', 'Mapbox', 'CSS Modules', 'Axios'],
-      category: 'Front-End',
-      demoUrl: 'https://demo.example.com/weather',
-      githubUrl: 'https://github.com/example/weather',
-      features: [
-        'Pronósticos por hora y diarios',
-        'Mapas interactivos con capas meteorológicas',
-        'Alertas meteorológicas en tiempo real',
-        'Búsqueda de ubicaciones global',
-        'Favoritos y ubicaciones guardadas',
-        'Datos históricos del clima',
-        'Información UV y calidad del aire',
-        'Animaciones meteorológicas'
-      ],
-      challenges: [
-        'Integración de múltiples APIs meteorológicas',
-        'Renderizado eficiente de mapas interactivos',
-        'Manejo de diferentes sistemas de unidades y zonas horarias'
-      ],
-      gallery: [
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Current+Weather',
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Map+View',
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Forecast+View'
-      ]
-    },
-    {
-      id: '5',
-      title: 'Task Management System',
-      description: 'Sistema de gestión de tareas con tableros Kanban, asignación de equipos y seguimiento de progreso.',
-      longDescription: 'Plataforma completa de gestión de proyectos y tareas diseñada para equipos modernos. Ofrece tableros Kanban personalizables, seguimiento de tiempo, asignación de recursos y análisis de productividad.',
-      image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=Task+Manager',
-      technologies: ['Svelte', 'Supabase', 'Tailwind CSS', 'TypeScript', 'Vite'],
-      category: 'Full Stack',
-      demoUrl: 'https://demo.example.com/tasks',
-      githubUrl: 'https://github.com/example/tasks',
-      features: [
-        'Tableros Kanban drag-and-drop',
-        'Asignación y gestión de equipos',
-        'Seguimiento de tiempo integrado',
-        'Dependencias entre tareas',
-        'Vista de calendario',
-        'Comentarios y archivos adjuntos',
-        'Notificaciones y recordatorios',
-        'Reportes de productividad'
-      ],
-      challenges: [
-        'Implementación de drag-and-drop fluido en Svelte',
-        'Sincronización en tiempo real con Supabase',
-        'Gestión de permisos y roles de equipo'
-      ],
-      gallery: [
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Kanban+Board',
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Task+Details',
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Team+View'
-      ]
-    },
-    {
-      id: '6',
-      title: 'Portfolio Generator',
-      description: 'Herramienta para crear portfolios personalizados con plantillas prediseñadas y editor visual.',
-      longDescription: 'Aplicación web que permite a desarrolladores y diseñadores crear portfolios profesionales sin escribir código. Incluye múltiples plantillas, editor visual drag-and-drop y exportación a sitios estáticos.',
-      image: 'https://placehold.co/1200x600/1a1a1a/a855f7?text=Portfolio+Generator',
-      technologies: ['Astro', 'React', 'Tailwind CSS', 'MDX', 'TypeScript'],
-      category: 'Front-End',
-      demoUrl: 'https://demo.example.com/portfolio-gen',
-      githubUrl: 'https://github.com/example/portfolio-gen',
-      features: [
-        'Múltiples plantillas modernas',
-        'Editor visual drag-and-drop',
-        'Personalización completa de colores',
-        'Integración con GitHub',
-        'SEO optimizado automáticamente',
-        'Exportación a sitio estático',
-        'Preview en tiempo real',
-        'Responsive automático'
-      ],
-      challenges: [
-        'Creación de un editor visual flexible y potente',
-        'Generación de código optimizado desde configuración visual',
-        'Balance entre simplicidad de uso y opciones de personalización'
-      ],
-      gallery: [
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Editor+View',
-        'https://placehold.co/800x500/1a1a1a/06b6d4?text=Templates',
-        'https://placehold.co/800x500/1a1a1a/a855f7?text=Preview'
-      ]
-    }
-  ];
-
-  return projects.map(project => ({
-    params: { id: project.id },
-    props: { project }
-  }));
+    return projects.map((project) => ({
+        params: { id: project.id },
+        props: { project },
+    }))
 }
 
-const { project } = Astro.props;
+const { project } = Astro.props
 ---
 
 <Layout title={`${project.title} - Portfolio`}>
-  <!-- Hero Section -->
-  <section class="pt-32 pb-12 relative overflow-hidden">
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-    </div>
-
-    <div class="container mx-auto px-6 z-10 relative">
-      <!-- Breadcrumb -->
-      <nav class="mb-8">
-        <ul class="flex items-center gap-2 text-gray-400">
-          <li><a href="/" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
-          <li>/</li>
-          <li><a href="/proyectos" class="hover:text-cyan-400 transition-colors">Proyectos</a></li>
-          <li>/</li>
-          <li class="text-cyan-400">{project.title}</li>
-        </ul>
-      </nav>
-
-      <!-- Title and Category -->
-      <div class="mb-8">
-        <span class="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold mb-4">
-          {project.category}
-        </span>
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-          {project.title}
-        </h1>
-        <p class="text-xl text-gray-400 max-w-3xl">
-          {project.description}
-        </p>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="flex gap-4 flex-wrap">
-        <a 
-          href={project.demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="px-6 py-3 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105 flex items-center gap-2"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-          </svg>
-          Ver Demo
-        </a>
-        <a 
-          href={project.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="px-6 py-3 border-2 border-cyan-500 rounded-full text-cyan-400 font-semibold hover:bg-cyan-500/10 transition-all hover:scale-105 flex items-center gap-2"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          Ver Código
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Image -->
-  <section class="py-12">
-    <div class="container mx-auto px-6">
-      <div class="relative">
-        <div class="absolute inset-0 bg-linear-to-r from-cyan-500 to-purple-600 rounded-2xl blur-xl opacity-30"></div>
-        <img 
-          src={project.image} 
-          alt={project.title}
-          class="relative w-full rounded-2xl shadow-2xl"
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Details -->
-  <section class="py-12">
-    <div class="container mx-auto px-6">
-      <div class="grid lg:grid-cols-3 gap-12">
-        <!-- Main Content -->
-        <div class="lg:col-span-2 space-y-12">
-          <!-- Description -->
-          <div>
-            <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
-              <span class="w-2 h-8 bg-linear-to-b from-cyan-400 to-purple-500 rounded-full"></span>
-              Descripción del Proyecto
-            </h2>
-            <p class="text-gray-400 text-lg leading-relaxed">
-              {project.longDescription}
-            </p>
-          </div>
-
-          <!-- Features -->
-          <div>
-            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span class="w-2 h-8 bg-linear-to-b from-cyan-400 to-purple-500 rounded-full"></span>
-              Características Principales
-            </h2>
-            <div class="grid md:grid-cols-2 gap-4">
-              {project.features.map(feature => (
-                <div class="flex items-start gap-3 bg-gray-900/50 backdrop-blur-sm p-4 rounded-lg border border-cyan-500/20">
-                  <svg class="w-6 h-6 text-cyan-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-gray-300">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <!-- Challenges -->
-          <div>
-            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span class="w-2 h-8 bg-linear-to-b from-cyan-400 to-purple-500 rounded-full"></span>
-              Desafíos Técnicos
-            </h2>
-            <div class="space-y-4">
-              {project.challenges.map(challenge => (
-                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-purple-500/20">
-                  <p class="text-gray-300 flex items-start gap-3">
-                    <svg class="w-6 h-6 text-purple-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    {challenge}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <!-- Gallery -->
-          <div>
-            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <span class="w-2 h-8 bg-linear-to-b from-cyan-400 to-purple-500 rounded-full"></span>
-              Galería
-            </h2>
-            <div class="grid md:grid-cols-2 gap-6">
-              {project.gallery.map((image, index) => (
-                <div class="relative overflow-hidden rounded-xl group">
-                  <img 
-                    src={image} 
-                    alt={`${project.title} screenshot ${index + 1}`}
-                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </div>
-              ))}
-            </div>
-          </div>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
 
-        <!-- Sidebar -->
-        <div class="space-y-6">
-          <!-- Technologies -->
-          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/20 sticky top-24">
-            <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-              Tecnologías
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              {project.technologies.map(tech => (
-                <span class="px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg text-sm font-semibold border border-cyan-500/30">
-                  {tech}
+        <div class="container mx-auto px-6 z-10 relative">
+            <!-- Breadcrumb -->
+            <nav class="mb-8">
+                <ul class="flex items-center gap-2 text-gray-400">
+                    <li><a href="/" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
+                    <li>/</li>
+                    <li><a href="/proyectos" class="hover:text-cyan-400 transition-colors">Proyectos</a></li>
+                    <li>/</li>
+                    <li class="text-cyan-400">{project.title}</li>
+                </ul>
+            </nav>
+
+            <!-- Title and Category -->
+            <div class="mb-8">
+                <span
+                    class="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold mb-4">
+                    {project.category}
                 </span>
-              ))}
+                <h1
+                    class="text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                    {project.title}
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl">
+                    {project.description}
+                </p>
             </div>
 
-            <div class="mt-6 pt-6 border-t border-gray-800">
-              <h4 class="text-lg font-semibold text-white mb-3">Categoría</h4>
-              <span class="inline-block px-4 py-2 bg-purple-500/20 text-purple-400 rounded-lg font-semibold">
-                {project.category}
-              </span>
+            <!-- Action Buttons -->
+            <div class="flex gap-4 flex-wrap">
+                <a
+                    href={project.web_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-3 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                    Ver Demo
+                </a>
+                <a
+                    href={project.github_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-3 border-2 border-cyan-500 rounded-full text-cyan-400 font-semibold hover:bg-cyan-500/10 transition-all hover:scale-105 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                        ></path>
+                    </svg>
+                    Ver Código
+                </a>
             </div>
-
-            <div class="mt-6 space-y-3">
-              <a 
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block w-full px-4 py-3 bg-cyan-500/20 text-cyan-400 rounded-lg font-semibold text-center hover:bg-cyan-500/30 transition-colors"
-              >
-                Visitar Sitio
-              </a>
-              <a 
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block w-full px-4 py-3 bg-gray-800 text-gray-300 rounded-lg font-semibold text-center hover:bg-gray-700 transition-colors"
-              >
-                Ver en GitHub
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Navigation to other projects -->
-  <section class="py-12">
-    <div class="container mx-auto px-6">
-      <div class="bg-linear-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-2xl p-8 text-center">
-        <h3 class="text-2xl font-bold text-white mb-4">
-          ¿Quieres ver más proyectos?
-        </h3>
-        <a 
-          href="/proyectos"
-          class="inline-block px-8 py-3 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105"
-        >
-          Ver Todos los Proyectos
-        </a>
-      </div>
-    </div>
-  </section>
+    <!-- Main Image -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="relative">
+                <div class="absolute inset-0 bg-linear-to-r from-cyan-500 to-purple-600 rounded-2xl blur-xl opacity-30">
+                </div>
+                <img src={project.image} alt={project.title} class="relative w-full rounded-2xl shadow-2xl" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2 space-y-12">
+                    <!-- Description -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-linear-to-b from-cyan-400 to-purple-500 rounded-full"></span>
+                            Descripción del Proyecto
+                        </h2>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            {project.longDescription}
+                        </p>
+                    </div>
+
+                    <!-- Features -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-linear-to-b from-cyan-400 to-purple-500 rounded-full"></span>
+                            Características Principales
+                        </h2>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            {
+                                project.features.map((feature) => (
+                                    <div class="flex items-start gap-3 bg-gray-900/50 backdrop-blur-sm p-4 rounded-lg border border-cyan-500/20">
+                                        <svg
+                                            class="w-6 h-6 text-cyan-400 shrink-0 mt-0.5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 13l4 4L19 7"
+                                            />
+                                        </svg>
+                                        <span class="text-gray-300">{feature}</span>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-linear-to-b from-cyan-400 to-purple-500 rounded-full"></span>
+                            Desafíos Técnicos
+                        </h2>
+                        <div class="space-y-4">
+                            {
+                                project.challenges.map((challenge) => (
+                                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-purple-500/20">
+                                        <p class="text-gray-300 flex items-start gap-3">
+                                            <svg
+                                                class="w-6 h-6 text-purple-400 shrink-0 mt-0.5"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                                                />
+                                            </svg>
+                                            {challenge}
+                                        </p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <!-- Gallery -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-linear-to-b from-cyan-400 to-purple-500 rounded-full"></span>
+                            Galería
+                        </h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            {
+                                project.gallery.map((image, index) => (
+                                    <div class="relative overflow-hidden rounded-xl group">
+                                        <img
+                                            src={image}
+                                            alt={`${project.title} screenshot ${index + 1}`}
+                                            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                        <div class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-6">
+                    <!-- Technologies -->
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/20 sticky top-24">
+                        <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                            Tecnologías
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                project.technologies.map((tech) => (
+                                    <span class="px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg text-sm font-semibold border border-cyan-500/30">
+                                        {tech}
+                                    </span>
+                                ))
+                            }
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-gray-800">
+                            <h4 class="text-lg font-semibold text-white mb-3">Categoría</h4>
+                            <span
+                                class="inline-block px-4 py-2 bg-purple-500/20 text-purple-400 rounded-lg font-semibold">
+                                {project.category}
+                            </span>
+                        </div>
+
+                        <div class="mt-6 space-y-3">
+                            <a
+                                href={project.web_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="block w-full px-4 py-3 bg-cyan-500/20 text-cyan-400 rounded-lg font-semibold text-center hover:bg-cyan-500/30 transition-colors">
+                                Visitar Sitio
+                            </a>
+                            <a
+                                href={project.github_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="block w-full px-4 py-3 bg-gray-800 text-gray-300 rounded-lg font-semibold text-center hover:bg-gray-700 transition-colors">
+                                Ver en GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Contact />
 </Layout>
