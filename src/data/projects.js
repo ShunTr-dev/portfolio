@@ -9,7 +9,7 @@ export const projects = [
             'Aplicación web y móvil de control horario en la nube, diseñada para cumplir la normativa laboral española de forma sencilla y segura.',
         longDescription:
             'BeeClock es una solución SaaS de control horario en la nube, desarrollada para facilitar a las empresas el cumplimiento de la normativa laboral española de registro de jornada. La plataforma combina una interfaz web y una aplicación móvil para permitir el fichaje en tiempo real, la gestión de turnos y la generación automática de informes legales. Como Full Stack Senior & Technical Lead, lideré el proyecto de principio a fin, incluyendo el análisis funcional y técnico, el diseño de la arquitectura del sistema y base de datos, el desarrollo backend con CakePHP y APIs RESTful, la implementación del frontend centrado en usabilidad y accesibilidad, la automatización de procesos de fichaje y turnos, y el despliegue en la nube con backups automáticos e integración continua. El resultado fue una plataforma estable, escalable y segura, con interfaz intuitiva y cumplimiento total de la normativa laboral.',
-        image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=BeeClock',
+        image: '/img/beeclock-main.png',
         technologies: ['CakePHP', 'PostgreSQL', 'Bootstrap', 'Git', 'REST API'],
         category: 'SaaS / Control Horario',
         features: [
@@ -36,7 +36,13 @@ export const projects = [
             'Reducción del papeleo y mejora de la trazabilidad de la jornada laboral',
             'Interfaz intuitiva y adaptable a dispositivos móviles y escritorio',
         ],
-        gallery: [],
+        gallery: [
+            '/img/beeclock-1.png',
+            '/img/beeclock-2.png',
+            '/img/beeclock-3.png',
+            '/img/beeclock-4.png',
+            '/img/beeclock-5.png',
+        ],
     },
     {
         id: 'gofer',
@@ -48,7 +54,7 @@ export const projects = [
             'Plataforma de pedidos y reparto a domicilio para el mercado andorrano, inspirada en Just Eat y Glovo, con un enfoque local.',
         longDescription:
             'Gofer es una plataforma integral que conecta restaurantes, repartidores y clientes en un entorno web y móvil. Permite gestionar pedidos en tiempo real, pagos online y seguimiento de entregas. Desarrollada de forma completa desde la arquitectura hasta el despliegue, con un backend robusto y una interfaz moderna centrada en la experiencia de usuario.',
-        image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=Gofer',
+        image: '/img/gofer-main.jpeg',
         technologies: ['CakePHP', 'PostgreSQL', 'REST API', 'Bootstrap', 'Git'],
         category: 'Delivery / Marketplace',
         features: [
@@ -87,7 +93,7 @@ export const projects = [
         description: 'Aplicación web para la gestión centralizada del personal del centro de investigación CIQUS.',
         longDescription:
             'Ciqus Staff Database es una aplicación web de gestión de personal desarrollada para el Centro Singular de Investigación en Química Biolóxica e Materiais Moleculares (CIQUS). El sistema permite centralizar, organizar y consultar la información del personal del centro (investigadores, técnicos, administrativos, becarios, etc.) de forma estructurada, facilitando el seguimiento de la actividad, los movimientos internos y la trazabilidad de los equipos de investigación. Como Full Stack Senior & Technical Lead, realicé el desarrollo completo del proyecto, incluyendo análisis funcional, diseño de arquitectura, desarrollo backend y frontend, gestión de datos jerárquicos, consultas avanzadas y despliegue en entorno cloud. El resultado fue un sistema estable, seguro y eficiente que optimizó la gestión administrativa y el acceso a la información institucional.',
-        image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=Ciqus+Staff+DB',
+        image: '/img/ciqus-main.png',
         technologies: ['CakePHP', 'PostgreSQL', 'Bootstrap', 'REST API', 'Git'],
         category: 'Gestión de Personal / Institucional',
         features: [
@@ -168,7 +174,7 @@ export const projects = [
             'Plataforma para la reserva, gestión y pago digital de aparcamientos con integración de pasarelas de pago seguras.',
         longDescription:
             'Paymeter es una plataforma integral de movilidad digital centrada en la reserva, gestión y pago de aparcamientos. Su objetivo es ofrecer a los conductores una experiencia fluida y sin fricciones, permitiendo buscar, reservar y pagar plazas de aparcamiento desde una sola aplicación web o móvil, de manera rápida, segura y totalmente automatizada. Como Full Stack Senior & Technical Lead, lideré el desarrollo completo del sistema, abarcando el diseño de arquitectura, desarrollo backend con CakePHP, integración de pasarelas de pago certificadas (Stripe, Redsys) cumpliendo normativas PCI-DSS, sistema de reservas en tiempo real, gestión de saldo compartido, frontend con UX optimizada, despliegue cloud y pruebas de rendimiento bajo alta concurrencia. El resultado fue una plataforma funcional y escalable que digitalizó la experiencia de estacionamiento urbano, reduciendo tiempos de búsqueda y pago en más de un 60%, y automatizando la gestión de cobros y reservas para operadores y usuarios.',
-        image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=Paymeter',
+        image: '/img/paymeter-main.png',
         technologies: ['CakePHP', 'PostgreSQL', 'Stripe', 'Redsys', 'REST API', 'Git'],
         category: 'Movilidad / Pagos Digitales',
         features: [
@@ -196,7 +202,7 @@ export const projects = [
             'Automatización total de cobros y reservas',
             'Plataforma estable, escalable y de alta disponibilidad',
         ],
-        gallery: [],
+        gallery: ['/img/paymeter-1.png', '/img/paymeter-2.png', '/img/paymeter-3.png', '/img/paymeter-4.png'],
     },
     {
         id: 'moncake',
@@ -207,7 +213,7 @@ export const projects = [
         description: 'Ecosistema SaaS para el sector hotelero: CMS, motor de reservas y PMS en la nube.',
         longDescription:
             'Moncake es una plataforma integral en la nube para el sector turístico y hotelero, que combina sitio web, CMS, motor de reservas y PMS (Property Management System) en una sola solución modular. Diseñada para digitalizar y automatizar la gestión hotelera, permite a los negocios turísticos controlar todo su ecosistema desde un único entorno: web corporativa, reservas, facturación, planificación, limpieza, ocupación y analítica. Como Desarrollador Full Stack y arquitecto principal, lideré el desarrollo completo del sistema durante más de siete años, incluyendo la arquitectura multi-tenant, el backend en CakePHP, la creación de un CMS modular, el desarrollo de un motor de reservas multiproducto y un PMS con facturación electrónica, check-in online, control de limpieza y reporting automatizado. Moncake también integra múltiples servicios externos (Stripe, Redsys, CECA, MercadoPago, Servired, One Signal, Mailchimp) y cuenta con despliegues automatizados en la nube con un SLA superior al 99,9%.',
-        image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=Moncake',
+        image: '/img/moncake-main.png',
         technologies: ['CakePHP', 'PostgreSQL', 'Stripe', 'Redsys', 'Mailchimp', 'AWS S3', 'Git'],
         category: 'Turismo / SaaS',
         features: [
@@ -236,19 +242,25 @@ export const projects = [
             'Escalabilidad total y sin interrupciones durante más de 7 años de evolución',
             'Satisfacción del cliente mejorada mediante dashboards y reporting inteligentes',
         ],
-        gallery: [],
+        gallery: [
+            '/img/moncake-1.png',
+            '/img/moncake-2.png',
+            '/img/moncake-3.png',
+            '/img/moncake-4.png',
+            '/img/moncake-5.png',
+        ],
     },
     {
         id: 'crabim',
         title: 'Crabim',
-        web_url: 'https://crabim.com/',
+        web_url: 'https://web.archive.org/web/20250228195439/https://crabim.com/',
         github_url: '',
         featured: false,
         description:
             'Plataforma SaaS de gestión inmobiliaria y marketing para agencias, con motor de reservas y web integrada.',
         longDescription:
             'Crabim es una plataforma SaaS en la nube diseñada para agencias inmobiliarias y gestores de propiedades. Centraliza la gestión completa de inmuebles, reservas, facturación y marketing en un solo entorno. Desarrollada como solución modular y multiempresa, incluye un CMS inmobiliario autogestionable, motor de reservas integrado, facturación automatizada y conexión con portales inmobiliarios y turísticos mediante APIs RESTful. Como Full Stack Senior & Technical Lead, lideré la arquitectura técnica, el desarrollo backend y frontend, la integración de pasarelas de pago seguras, la automatización de procesos contables y la implementación cloud con despliegues sin interrupciones y alta disponibilidad.',
-        image: 'https://placehold.co/1200x600/1a1a1a/06b6d4?text=Crabim',
+        image: '/img/crabim-main.png',
         technologies: ['CakePHP', 'PostgreSQL', 'Plesk', 'Stripe', 'REST API', 'AWS S3'],
         category: 'Inmobiliario / SaaS',
         features: [
@@ -277,7 +289,18 @@ export const projects = [
             'Centralización total de la gestión operativa y financiera',
             'Escalabilidad y personalización total para cada modelo de negocio',
         ],
-        gallery: [],
+        gallery: [
+            '/img/crabim-1.png',
+            '/img/crabim-2.jpg',
+            '/img/crabim-3.jpg',
+            '/img/crabim-4.png',
+            '/img/crabim-5.png',
+            '/img/crabim-6.png',
+            '/img/crabim-7.jpg',
+            '/img/crabim-8.jpg',
+            '/img/crabim-9.png',
+            '/img/crabim-10.png',
+        ],
     },
     {
         id: 'dexmate',
