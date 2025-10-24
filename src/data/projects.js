@@ -7,17 +7,18 @@ export const projects = [
         featured: false,
         description:
             'Aplicación web y móvil de control horario en la nube, diseñada para cumplir la normativa laboral española de forma sencilla y segura.',
-        longDescription:
-            'BeeClock es una solución SaaS de control horario en la nube, desarrollada para facilitar a las empresas el cumplimiento de la normativa laboral española de registro de jornada. La plataforma combina una interfaz web y una aplicación móvil para permitir el fichaje en tiempo real, la gestión de turnos y la generación automática de informes legales. Como Full Stack Senior & Technical Lead, lideré el proyecto de principio a fin, incluyendo el análisis funcional y técnico, el diseño de la arquitectura del sistema y base de datos, el desarrollo backend con CakePHP y APIs RESTful, la implementación del frontend centrado en usabilidad y accesibilidad, la automatización de procesos de fichaje y turnos, y el despliegue en la nube con backups automáticos e integración continua. El resultado fue una plataforma estable, escalable y segura, con interfaz intuitiva y cumplimiento total de la normativa laboral.',
+        longDescription: `BeeClock es una solución SaaS de control horario en la nube, desarrollada para facilitar a las empresas el cumplimiento de la normativa laboral española de registro de jornada. La plataforma combina una interfaz web y una aplicación móvil para permitir el fichaje en tiempo real, la gestión de turnos y la generación automática de informes legales.
+\nComo Full Stack Senior & Technical Lead, lideré el proyecto de principio a fin, incluyendo el análisis funcional y técnico, el diseño de la arquitectura del sistema, base de datos, y lógica de negocio. El desarrollo con CakePHP y APIs RESTful, la implementación del frontend centrado en usabilidad y accesibilidad, la automatización de procesos de fichaje y turnos, y el despliegue en la nube con backups automáticos e integración continua.
+\nEl resultado fue una plataforma estable, escalable y segura, con interfaz intuitiva y cumplimiento total de la normativa laboral.`,
         image: '/img/beeclock-main.png',
-        technologies: ['CakePHP', 'PostgreSQL', 'Bootstrap', 'Git', 'REST API'],
+        technologies: ['CakePHP', 'PostgreSQL', 'Bootstrap', 'Git', 'REST API', 'Plesk'],
         category: 'SaaS / Control Horario',
         features: [
             'Registro horario con fichaje de entrada, salida y pausas',
             'Panel administrativo con informes legales automáticos (diarios, semanales y mensuales)',
             'Gestión de turnos y automatización del registro horario',
             'Autenticación segura y roles de usuario',
-            'Despliegue en servidor cloud con backups automáticos e integración con Git',
+            'Despliegue en VPS con backups automáticos e integración con Git',
         ],
         challenges: [
             'Cumplimiento normativo completo de la ley española de control horario',
@@ -52,17 +53,16 @@ export const projects = [
         featured: false,
         description:
             'Plataforma de pedidos y reparto a domicilio para el mercado andorrano, inspirada en Just Eat y Glovo, con un enfoque local.',
-        longDescription:
-            'Gofer es una plataforma integral que conecta restaurantes, repartidores y clientes en un entorno web y móvil. Permite gestionar pedidos en tiempo real, pagos online y seguimiento de entregas. Desarrollada de forma completa desde la arquitectura hasta el despliegue, con un backend robusto y una interfaz moderna centrada en la experiencia de usuario.',
+        longDescription: `Gofer es una plataforma integral que conecta restaurantes, repartidores y clientes en un entorno web y móvil. Permite gestionar pedidos en tiempo real, pagos online y seguimiento de entregas.
+\nComo Full Stack Senior & Technical Lead, lideré el proyecto de principio a fin, incluyendo el análisis funcional y técnico, el diseño de la arquitectura del sistema, base de datos, y lógica de negocio. El desarrollo con CakePHP y APIs RESTful, la implementación del frontend centrado en usabilidad y accesibilidad, la automatización de procesos de despliegue y la integración continua.`,
         image: '/img/gofer-main.jpeg',
-        technologies: ['CakePHP', 'PostgreSQL', 'REST API', 'Bootstrap', 'Git'],
+        technologies: ['CakePHP', 'PostgreSQL', 'REST API', 'Bootstrap', 'Git', 'Redsys', 'Stripe', 'Plesk'],
         category: 'Delivery / Marketplace',
         features: [
             'Gestión integral de pedidos, restaurantes y repartidores',
             'Panel administrativo con estadísticas y control de ventas',
             'Pasarela de pago integrada (Redsys / Stripe)',
             'Notificaciones y seguimiento en tiempo real',
-            'Arquitectura escalable y segura',
         ],
         challenges: [
             'Integración de múltiples roles (cliente, repartidor, restaurante)',
@@ -73,13 +73,11 @@ export const projects = [
             start: '2019-03',
             end: '2019-12',
         },
-        company: 'Primate',
         role: 'Full Stack Senior & Technical Lead',
         results: [
             'Digitalización del sistema de reparto para restaurantes locales de Andorra',
             'Optimización logística mediante seguimiento en tiempo real',
             'Gestión centralizada de pedidos, usuarios y pagos online',
-            'Plataforma escalable y estable desplegada en entorno cloud',
         ],
         gallery: [],
     },
@@ -91,10 +89,10 @@ export const projects = [
         github_url: '',
         featured: false,
         description: 'Aplicación web para la gestión centralizada del personal del centro de investigación CIQUS.',
-        longDescription:
-            'Ciqus Staff Database es una aplicación web de gestión de personal desarrollada para el Centro Singular de Investigación en Química Biolóxica e Materiais Moleculares (CIQUS). El sistema permite centralizar, organizar y consultar la información del personal del centro (investigadores, técnicos, administrativos, becarios, etc.) de forma estructurada, facilitando el seguimiento de la actividad, los movimientos internos y la trazabilidad de los equipos de investigación. Como Full Stack Senior & Technical Lead, realicé el desarrollo completo del proyecto, incluyendo análisis funcional, diseño de arquitectura, desarrollo backend y frontend, gestión de datos jerárquicos, consultas avanzadas y despliegue en entorno cloud. El resultado fue un sistema estable, seguro y eficiente que optimizó la gestión administrativa y el acceso a la información institucional.',
+        longDescription: `Ciqus Staff Database es una aplicación web de gestión de personal desarrollada para el Centro Singular de Investigación en Química Biolóxica e Materiais Moleculares (CIQUS). El sistema permite centralizar, organizar y consultar la información del personal del centro (investigadores, técnicos, administrativos, becarios, etc.) de forma estructurada, facilitando el seguimiento de la actividad, los movimientos internos y la trazabilidad de los equipos de investigación.
+        \n\nComo Full Stack Senior & Technical Lead, realicé el desarrollo completo del proyecto, incluyendo análisis funcional, diseño de arquitectura, desarrollo backend y frontend, gestión de datos jerárquicos, consultas avanzadas y despliegue. El resultado fue un sistema estable, seguro y eficiente que optimizó la gestión administrativa y el acceso a la información institucional.`,
         image: '/img/ciqus-main.png',
-        technologies: ['CakePHP', 'PostgreSQL', 'Bootstrap', 'REST API', 'Git'],
+        technologies: ['CakePHP', 'PostgreSQL', 'Bootstrap', 'Git', 'Plesk'],
         category: 'Gestión de Personal / Institucional',
         features: [
             'Gestión completa del personal y departamentos',
@@ -107,13 +105,11 @@ export const projects = [
             'Diseño de una base de datos flexible para múltiples tipos de usuarios y jerarquías',
             'Optimización de filtros complejos y relaciones entre entidades',
             'Implementación de backups automáticos y auditoría de cambios',
-            'Despliegue y mantenimiento en entorno cloud con control de versiones',
         ],
         dates: {
             start: '2021-02',
             end: '2021-05',
         },
-        company: 'Primate',
         role: 'Full Stack Senior & Technical Lead',
         results: [
             'Sistema estable, seguro y escalable',
@@ -154,7 +150,6 @@ export const projects = [
             start: '2021-03',
             end: '2023-07',
         },
-        company: 'Primate',
         role: 'Full Stack Senior & Technical Lead',
         results: [
             'Incremento del 50% en la eficiencia de auditorías veterinarias',
@@ -194,7 +189,6 @@ export const projects = [
             start: '2022-05',
             end: '2022-11',
         },
-        company: 'Primate',
         role: 'Full Stack Senior & Technical Lead',
         results: [
             'Digitalización completa de la experiencia de estacionamiento urbano',
@@ -234,7 +228,6 @@ export const projects = [
             start: '2017-04',
             end: '2024-07',
         },
-        company: 'Primate',
         role: 'Full Stack Senior',
         results: [
             'Reducción del 70% en tareas administrativas mediante automatización',
@@ -281,7 +274,6 @@ export const projects = [
             start: '2019-03',
             end: '2024-07',
         },
-        company: 'Primate',
         role: 'Full Stack Senior / Technical Lead',
         results: [
             'Reducción del 65% del tiempo administrativo mediante automatización contable',
