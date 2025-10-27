@@ -59,9 +59,4 @@ export const certifications = [
         institution: 'Udemy',
         year: 'may. 2021',
     },
-    {
-        title: 'Curso de Laravel desde cero + APIs RESTful y webs Angular',
-        institution: 'Udemy',
-        year: 'feb. 2019',
-    },
 ]

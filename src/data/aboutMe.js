@@ -9,8 +9,7 @@ export const aboutMe = {
     ],
     cv: [
         `Desarrollador Full Stack Senior & Technical Lead con más de 8 años de experiencia construyendo plataformas SaaS, sistemas cloud y herramientas de automatización para distintos sectores.`,
-        `He diseñado, desarrollado y desplegado productos completos de principio a fin, abarcando arquitectura, backend, frontend, bases de datos, integración de APIs, cloud computing, pagos en línea y automatización de procesos...`,
-        `Poseo un nivel de inglés C1.1. `,
+        `Diseño, desarrollo y despliego productos completos de principio a fin, abarcando arquitectura, backend, frontend, bases de datos, integración de APIs, cloud computing, pagos en línea y automatización de procesos...`,
         `En mi tiempo libre, disfruto colaborando con la asociación AJERGA ayudando a integrar a personas retornadas, y siendo el responsable de la parte técnica de las plataformas de la asociación.`,
     ],
 }

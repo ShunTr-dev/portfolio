@@ -5,6 +5,7 @@ export const projects = [
         web_url: 'https://beeclock.app/',
         github_url: '',
         featured: false,
+        cv: false,
         description:
             'Aplicación web y móvil de control horario en la nube, diseñada para cumplir la normativa laboral española de forma sencilla y segura.',
         longDescription: `BeeClock es una solución SaaS de control horario en la nube, desarrollada para facilitar a las empresas el cumplimiento de la normativa laboral española de registro de jornada. La plataforma combina una interfaz web y una aplicación móvil para permitir el fichaje en tiempo real, la gestión de turnos y la generación automática de informes legales.
@@ -51,6 +52,7 @@ export const projects = [
         web_url: '',
         github_url: '',
         featured: false,
+        cv: false,
         description:
             'Plataforma de pedidos y reparto a domicilio para el mercado andorrano, inspirada en Just Eat y Glovo, con un enfoque local.',
         longDescription: `Gofer es una plataforma integral que conecta restaurantes, repartidores y clientes en un entorno web y móvil. Permite gestionar pedidos en tiempo real, pagos online y seguimiento de entregas.
@@ -88,6 +90,7 @@ export const projects = [
         web_url: 'https://ciqusstaffdatabase.com/',
         github_url: '',
         featured: false,
+        cv: false,
         description: 'Aplicación web para la gestión centralizada del personal del centro de investigación CIQUS.',
         longDescription: `Ciqus Staff Database es una aplicación web de gestión de personal desarrollada para el Centro Singular de Investigación en Química Biolóxica e Materiais Moleculares (CIQUS). El sistema permite centralizar, organizar y consultar la información del personal del centro (investigadores, técnicos, administrativos, becarios, etc.) de forma estructurada, facilitando el seguimiento de la actividad, los movimientos internos y la trazabilidad de los equipos de investigación.
         \n\nComo Full Stack Senior & Technical Lead, realicé el desarrollo completo del proyecto, incluyendo análisis funcional, diseño de arquitectura, desarrollo backend y frontend, gestión de datos jerárquicos, consultas avanzadas y despliegue. El resultado fue un sistema estable, seguro y eficiente que optimizó la gestión administrativa y el acceso a la información institucional.`,
@@ -125,6 +128,7 @@ export const projects = [
         web_url: 'https://welfaretracker.com/',
         github_url: '',
         featured: true,
+        cv: true,
         description:
             'Plataforma tecnológica para evaluar el bienestar animal mediante datos biométricos y análisis en tiempo real.',
         longDescription: `Welfare Tracker es una plataforma tecnológica de bienestar animal que combina IoT, análisis de datos biométricos y visualización inteligente para evaluar, cuantificar y mejorar el bienestar en explotaciones ganaderas. El sistema integra sensores de campo, herramientas de auditoría y un panel web interactivo que permite a veterinarios y laboratorios monitorizar indicadores clave de salud y comportamiento animal en tiempo real.
@@ -165,6 +169,7 @@ export const projects = [
         web_url: 'https://www.paymeter.io/es',
         github_url: '',
         featured: false,
+        cv: true,
         description:
             'Plataforma para la reserva, gestión y pago digital de aparcamientos con integración de pasarelas de pago seguras.',
         longDescription: `Paymeter es una plataforma integral de movilidad digital centrada en la reserva, gestión y pago de aparcamientos. Su objetivo es ofrecer a los conductores una experiencia fluida y sin fricciones, permitiendo buscar, reservar y pagar plazas de aparcamiento desde una sola aplicación web o móvil, de manera rápida, segura y totalmente automatizada.
@@ -202,6 +207,7 @@ export const projects = [
         web_url: 'https://moncake.com/',
         github_url: '',
         featured: false,
+        cv: true,
         description: 'Ecosistema SaaS para el sector hotelero: CMS, motor de reservas y PMS en la nube.',
         longDescription: `Moncake es una plataforma integral en la nube para el sector turístico y hotelero, que combina sitio web, CMS, motor de reservas y PMS (Property Management System) en una sola solución modular. Diseñada para digitalizar y automatizar la gestión hotelera, permite a los negocios turísticos controlar todo su ecosistema desde un único entorno: web corporativa, reservas, facturación, planificación, limpieza, ocupación y analítica.
         \n\nComo Desarrollador Full Stack hice el mantenimiento y actualización del sistema durante más de siete años, incluyendo el backend en CakePHP, la creación de un CMS modular, el desarrollo de un motor de reservas multiproducto y un PMS con facturación electrónica, check-in online, control de limpieza y reporting automatizado. Moncake también integra múltiples servicios externos (Stripe, Redsys, CECA, MercadoPago, Servired, One Signal, Mailchimp) y cuenta con despliegues automatizados.`,
@@ -256,6 +262,7 @@ export const projects = [
         web_url: 'https://web.archive.org/web/20250228195439/https://crabim.com/',
         github_url: '',
         featured: false,
+        cv: false,
         description:
             'Plataforma SaaS de gestión inmobiliaria y marketing para agencias, con motor de reservas y web integrada.',
         longDescription: `Crabim es una plataforma SaaS en la nube diseñada para agencias inmobiliarias y gestores de propiedades. Centraliza la gestión completa de inmuebles, reservas, facturación y marketing en un solo entorno. Desarrollada como solución modular y multiempresa, incluye un CMS inmobiliario autogestionable, motor de reservas integrado, facturación automatizada y conexión con portales inmobiliarios y turísticos mediante APIs RESTful.
@@ -307,6 +314,7 @@ export const projects = [
         web_url: 'https://dexmate.shuntr.dev/',
         github_url: 'https://github.com/ShunTr-dev/dexmate-shop-frontend',
         featured: true,
+        cv: true,
         description:
             'Plataforma inteligente de gestión de productos para e-commerce con generación automática mediante IA.',
         longDescription: `Dexmate es una plataforma de automatización para e-commerce que utiliza inteligencia artificial y arquitectura cloud para crear, traducir y publicar fichas de producto de forma automática. 
@@ -356,6 +364,7 @@ export const projects = [
         web_url: 'https://tuwebajuicio.shuntr.dev/',
         github_url: 'https://github.com/ShunTr-dev/before-it-goes-to-production',
         featured: true,
+        cv: true,
         description:
             'Plataforma de auditoría web automática que analiza rendimiento, accesibilidad, SEO y seguridad de cualquier sitio web.',
         longDescription: `Tu Web a Juicio! es una herramienta avanzada de análisis y diagnóstico web que ejecuta más de 300 pruebas automáticas sobre una URL. Combina datos de W3C Validator, Google PageSpeed Insights y Lighthouse para evaluar el rendimiento, la accesibilidad, el SEO y la seguridad de un sitio.

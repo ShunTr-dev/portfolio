@@ -19,6 +19,23 @@ export function generateCV(envVars = {}) {
     const margin = 20
     const maxWidth = pageWidth - margin * 2
 
+    // Imagen de perfil en la esquina superior derecha
+    const profileImgSize = 35
+    const profileImgX = pageWidth - margin - profileImgSize
+    const profileImgY = 25
+
+    // Cargar y añadir imagen de perfil
+    if (envVars.PROFILE_IMAGE) {
+        try {
+            doc.addImage(envVars.PROFILE_IMAGE, 'JPEG', profileImgX, profileImgY, profileImgSize, profileImgSize + 7)
+            // Añadir borde circular (simulado con rectángulo redondeado)
+            doc.setDrawColor(...primaryColor)
+            doc.setLineWidth(0.5)
+        } catch (error) {
+            console.error('Error al añadir imagen de perfil:', error)
+        }
+    }
+
     // Función para añadir nueva página si es necesario
     const checkPageBreak = (neededSpace = 20) => {
         if (yPos + neededSpace > pageHeight - margin) {
@@ -40,6 +57,9 @@ export function generateCV(envVars = {}) {
     }
 
     // === ENCABEZADO ===
+    // Ajustar el ancho máximo del texto para no superponer la imagen
+    const headerMaxWidth = maxWidth - profileImgSize - 10
+
     // Nombre
     doc.setFontSize(28)
     doc.setTextColor(...primaryColor)
@@ -51,7 +71,7 @@ export function generateCV(envVars = {}) {
     doc.setFontSize(11)
     doc.setTextColor(...lightGray)
     doc.setFont('helvetica', 'normal')
-    const descriptionLines = doc.splitTextToSize(envVars.DESCRIPTION_PHRASE || '', maxWidth)
+    const descriptionLines = doc.splitTextToSize(envVars.DESCRIPTION_PHRASE || '', headerMaxWidth)
     descriptionLines.forEach((line) => {
         doc.text(line, margin, yPos)
         yPos += 5
@@ -62,6 +82,8 @@ export function generateCV(envVars = {}) {
     doc.setFontSize(10)
     doc.setTextColor(...textColor)
     doc.text(`Email: ${envVars.EMAIL || ''}`, margin, yPos)
+    yPos += 5
+    doc.text(`Teléfono: ${envVars.PHONE || ''}`, margin, yPos)
     yPos += 5
     doc.text(`GitHub: ${envVars.GITHUB_URL || ''}`, margin, yPos)
     yPos += 5
@@ -88,7 +110,7 @@ export function generateCV(envVars = {}) {
 
     aboutMe.cv.forEach((paragraph) => {
         const height = addWrappedText(paragraph, margin, yPos, maxWidth)
-        yPos += height + 3
+        yPos += height
     })
 
     yPos += 5
@@ -120,10 +142,10 @@ export function generateCV(envVars = {}) {
         //doc.text(` - ${edu.institution} | ${edu.year}`, margin + titleWidth, yPos)
         doc.text(` - ${edu.institution}`, margin + titleWidth, yPos)
 
-        yPos += 7
+        yPos += 5
 
         if (index < education.length - 1) {
-            yPos += 2
+            yPos += 1
         }
     })
 
@@ -168,7 +190,10 @@ export function generateCV(envVars = {}) {
     doc.text('PROYECTOS DESTACADOS', margin, yPos)
     yPos += 8
 
-    projects.forEach((project, index) => {
+    // Filtrar solo los proyectos con cv: true
+    const cvProjects = projects.filter((project) => project.cv === true)
+
+    cvProjects.forEach((project, index) => {
         checkPageBreak(40)
 
         // Título del proyecto
@@ -193,7 +218,7 @@ export function generateCV(envVars = {}) {
         doc.setFont('helvetica', 'normal')
         doc.setTextColor(...textColor)
         const descHeight = addWrappedText(project.description, margin, yPos, maxWidth, 5)
-        yPos += descHeight + 3
+        yPos += descHeight
 
         // Tecnologías
         if (project.technologies && project.technologies.length > 0) {
@@ -206,7 +231,7 @@ export function generateCV(envVars = {}) {
             doc.setTextColor(...lightGray)
             const techText = project.technologies.join(', ')
             const techHeight = addWrappedText(techText, margin + 25, yPos, maxWidth - 25, 5)
-            yPos += techHeight + 3
+            yPos += techHeight
         }
 
         // URL del proyecto
@@ -217,7 +242,7 @@ export function generateCV(envVars = {}) {
             yPos += 5
         }
 
-        if (index < projects.length - 1) {
+        if (index < cvProjects.length - 1) {
             yPos += 5
         }
     })
