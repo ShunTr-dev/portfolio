@@ -11,9 +11,10 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.props
+const portfolioName = import.meta.env.PORTFOLIO_NAME
 ---
 
-<Layout title={`${project.title} - Portfolio`}>
+<Layout title={`${portfolioName} - ${project.title}`}>
     <!-- Hero Section -->
     <section class="pt-32 pb-12 relative overflow-hidden">
         <div class="absolute inset-0 overflow-hidden pointer-events-none">

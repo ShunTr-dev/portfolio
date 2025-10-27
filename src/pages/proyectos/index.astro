@@ -3,9 +3,11 @@ import Layout from '../../layouts/Layout.astro'
 
 import { projects } from '../../data/projects.js'
 import Contact from '../../components/contact.astro'
+
+const portfolioName = import.meta.env.PORTFOLIO_NAME
 ---
 
-<Layout title="Proyectos - Portfolio">
+<Layout title={`${portfolioName} - Proyectos`}>
     <!-- Hero Section -->
     <section class="pt-32 pb-16 relative overflow-hidden">
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
