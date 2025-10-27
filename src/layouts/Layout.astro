@@ -11,7 +11,7 @@ interface Props {
 }
 
 const {
-    title = import.meta.env.PORTFOLIO_NAME,
+    title = `${import.meta.env.PORTFOLIO_NAME} - ${import.meta.env.PORTFOLIO_JOB_TITLE}`,
     description = import.meta.env.DESCRIPTION_PHRASE,
     image = '/img/profile.jpg',
     canonical = Astro.url.href,
