@@ -169,7 +169,7 @@ export const projects = [
         web_url: 'https://www.paymeter.io/es',
         github_url: '',
         featured: false,
-        cv: true,
+        cv: false,
         description:
             'Plataforma para la reserva, gestión y pago digital de aparcamientos con integración de pasarelas de pago seguras.',
         longDescription: `Paymeter es una plataforma integral de movilidad digital centrada en la reserva, gestión y pago de aparcamientos. Su objetivo es ofrecer a los conductores una experiencia fluida y sin fricciones, permitiendo buscar, reservar y pagar plazas de aparcamiento desde una sola aplicación web o móvil, de manera rápida, segura y totalmente automatizada.
@@ -207,7 +207,7 @@ export const projects = [
         web_url: 'https://moncake.com/',
         github_url: '',
         featured: false,
-        cv: true,
+        cv: false,
         description: 'Ecosistema SaaS para el sector hotelero: CMS, motor de reservas y PMS en la nube.',
         longDescription: `Moncake es una plataforma integral en la nube para el sector turístico y hotelero, que combina sitio web, CMS, motor de reservas y PMS (Property Management System) en una sola solución modular. Diseñada para digitalizar y automatizar la gestión hotelera, permite a los negocios turísticos controlar todo su ecosistema desde un único entorno: web corporativa, reservas, facturación, planificación, limpieza, ocupación y analítica.
         \n\nComo Desarrollador Full Stack hice el mantenimiento y actualización del sistema durante más de siete años, incluyendo el backend en CakePHP, la creación de un CMS modular, el desarrollo de un motor de reservas multiproducto y un PMS con facturación electrónica, check-in online, control de limpieza y reporting automatizado. Moncake también integra múltiples servicios externos (Stripe, Redsys, CECA, MercadoPago, Servired, One Signal, Mailchimp) y cuenta con despliegues automatizados.`,

@@ -2,6 +2,7 @@ import jsPDF from 'jspdf'
 import { aboutMe } from '../data/aboutMe.js'
 import { certifications } from '../data/certifications.js'
 import { education } from '../data/education.js'
+import { experience } from '../data/experience.js'
 import { projects } from '../data/projects.js'
 
 export function generateCV(envVars = {}) {
@@ -111,6 +112,61 @@ export function generateCV(envVars = {}) {
     aboutMe.cv.forEach((paragraph) => {
         const height = addWrappedText(paragraph, margin, yPos, maxWidth)
         yPos += height
+    })
+
+    yPos += 5
+
+    // === EXPERIENCIA ===
+    checkPageBreak(30)
+    doc.setFontSize(16)
+    doc.setTextColor(...primaryColor)
+    doc.setFont('helvetica', 'bold')
+    doc.text('EXPERIENCIA', margin, yPos)
+    yPos += 8
+
+    experience.forEach((exp, index) => {
+        checkPageBreak(25)
+
+        doc.setFontSize(11)
+        doc.setTextColor(...textColor)
+
+        // Rol en negrita
+        doc.setFont('helvetica', 'bold')
+        doc.text(exp.role, margin, yPos)
+
+        // Obtener el ancho del rol para continuar después
+        const roleWidth = doc.getTextWidth(exp.role)
+
+        // Empresa y período en la misma línea, después del rol
+        doc.setFontSize(10)
+        doc.setFont('helvetica', 'normal')
+        doc.setTextColor(...lightGray)
+        doc.text(` - ${exp.company} | ${exp.period}`, margin + roleWidth, yPos)
+        yPos += 5
+
+        // Descripción
+        doc.setFontSize(9)
+        doc.setTextColor(...textColor)
+        const descHeight = addWrappedText(exp.description, margin, yPos, maxWidth, 5)
+        yPos += descHeight + 2
+
+        // Tecnologías
+        if (exp.technologies && exp.technologies.length > 0) {
+            doc.setFontSize(9)
+            doc.setFont('helvetica', 'bold')
+            doc.setTextColor(...textColor)
+            doc.text('Tecnologías: ', margin, yPos)
+
+            doc.setFont('helvetica', 'normal')
+            doc.setTextColor(...lightGray)
+            const techText = exp.technologies.join(', ')
+            const techHeight = addWrappedText(techText, margin + 25, yPos, maxWidth - 25, 5)
+            yPos += techHeight + 2
+        }
+
+        if (index < experience.length - 1) {
+            yPos += 3
+        }
     })
 
     yPos += 5

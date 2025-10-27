@@ -4,7 +4,7 @@ export const experience = [
         company: 'Primate',
         period: '2017 - 2024',
         description:
-            'Durante más de siete años formé parte del equipo de Primate, una empresa dedicada al desarrollo de software a medida para distintos sectores. Participé en todas las fases del ciclo de vida del producto, desde la toma de requerimientos hasta el despliegue y mantenimiento en producción.',
+            'Empresa dedicada al desarrollo de software a medida para distintos sectores. Participé en todas las fases del ciclo de vida del producto, desde la toma de requerimientos hasta el despliegue y mantenimiento en producción.',
         technologies: [
             'PHP',
             'Laravel',
