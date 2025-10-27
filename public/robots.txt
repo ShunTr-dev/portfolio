@@ -1,0 +1,10 @@
+# Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://pablomartinez.shuntr.dev/
+
+# Disallow admin or private directories (if any)
+# Disallow: /admin/
+# Disallow: /private/

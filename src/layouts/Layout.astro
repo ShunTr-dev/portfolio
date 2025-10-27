@@ -6,12 +6,20 @@ import Footer from '../components/Footer.astro'
 interface Props {
     title?: string
     description?: string
+    image?: string
+    canonical?: string
 }
 
 const {
-    title = 'Portfolio - Desarrollador Front-End',
-    description = 'Portfolio profesional de un desarrollador front-end especializado en crear experiencias web modernas e inmersivas.',
+    title = import.meta.env.PORTFOLIO_NAME,
+    description = import.meta.env.DESCRIPTION_PHRASE,
+    image = '/img/profile.jpg',
+    canonical = Astro.url.href,
 } = Astro.props
+
+const siteName = import.meta.env.PORTFOLIO_NAME || 'Pablo Martínez'
+const siteUrl = import.meta.env.WEB_URL || Astro.site?.toString() || ''
+const fullImageUrl = new URL(image, siteUrl).toString()
 ---
 
 <!doctype html>
@@ -19,21 +27,79 @@ const {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={description} />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
+
+        <!-- Primary Meta Tags -->
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="author" content={siteName} />
+        <meta
+            name="keywords"
+            content="desarrollador full stack, programador, portfolio, desarrollo web, javascript, react, node, php, laravel"
+        />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href={canonical} />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+        <!-- Robots -->
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:site_name" content={siteName} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={fullImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={title} />
+        <meta property="og:locale" content="es_ES" />
 
         <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonical} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={fullImageUrl} />
+        <meta name="twitter:image:alt" content={title} />
+        <meta name="twitter:creator" content={import.meta.env.TWITTER_USERNAME || '@tu_usuario'} />
+        <meta name="twitter:site" content={import.meta.env.TWITTER_USERNAME || '@tu_usuario'} />
 
-        <title>{title}</title>
+        <!-- LinkedIn -->
+        <meta property="og:image" content={fullImageUrl} />
+        <meta property="og:image:type" content="image/jpeg" />
+
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#06b6d4" />
+        <meta name="msapplication-TileColor" content="#06b6d4" />
+
+        <!-- Additional SEO -->
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <!-- Structured Data (JSON-LD) -->
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Person',
+                name: siteName,
+                url: siteUrl,
+                image: fullImageUrl,
+                jobTitle: 'Full Stack Developer & Technical Lead',
+                description: description,
+                sameAs: [import.meta.env.LINKEDIN_URL || '', import.meta.env.GITHUB_URL || ''].filter(Boolean),
+            })}
+        />
     </head>
     <body class="bg-gray-950 text-gray-100">
         <Header />
