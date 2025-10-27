@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.15",
     "astro": "^5.14.8",
+    "jspdf": "^3.0.3",
     "tailwindcss": "^4.1.15"
   }
 }

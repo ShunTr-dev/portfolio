@@ -1,4 +1,5 @@
 ---
+import DownloadCV from './DownloadCV.astro'
 const EMAIL = import.meta.env.EMAIL || 'email@example.com'
 const GITHUB_URL = import.meta.env.GITHUB_URL || 'https://github.com'
 const LINKEDIN_URL = import.meta.env.LINKEDIN_URL || 'https://linkedin.com'
@@ -83,12 +84,13 @@ const PORTFOLIO_NAME = import.meta.env.PORTFOLIO_NAME || 'Pablo Martínez'
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-center">
+                    <div class="flex flex-col items-center justify-center gap-4">
                         <a
                             href={`mailto:${EMAIL}`}
                             class="px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105 inline-block">
                             Enviar Email
                         </a>
+                        <DownloadCV />
                     </div>
                 </div>
             </div>

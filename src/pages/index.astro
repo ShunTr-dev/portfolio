@@ -7,6 +7,7 @@ import { experience } from '../data/experience.js'
 import Contact from '../components/contact.astro'
 
 import { projects } from '../data/projects.js'
+import { aboutMe } from '../data/aboutMe.js'
 
 const EMAIL = import.meta.env.EMAIL || 'email@example.com'
 const DESCRIPTION_PHRASE =
@@ -67,29 +68,11 @@ const PORTFOLIO_NAME = import.meta.env.PORTFOLIO_NAME || 'Pablo Martínez'
                         class="text-5xl font-bold mb-6 bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                         Sobre Mí
                     </h2>
-
-                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
-                        Soy Desarrollador Full Stack Senior & Technical Lead con más de 8 años de experiencia
-                        construyendo plataformas SaaS, sistemas cloud y herramientas de automatización para distintos
-                        sectores: turismo, e-commerce, inmobiliaria, investigación y gestión empresarial.
-                    </p>
-                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
-                        He diseñado, desarrollado y desplegado productos completos de principio a fin, abarcando
-                        arquitectura, backend, frontend, bases de datos, integración de APIs, cloud computing, pagos en
-                        línea y automatización de procesos.
-                    </p>
-                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
-                        Mi enfoque combina solidez técnica, eficiencia y visión de producto, garantizando soluciones
-                        escalables, seguras y mantenibles.
-                    </p>
-                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
-                        Me apasiona crear software que resuelva problemas reales y evolucione con el tiempo, priorizando
-                        siempre la estabilidad en producción y la calidad del código.
-                    </p>
-                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
-                        Poseo un nivel de inglés C1.1, lo que me permite colaborar con equipos internacionales,
-                        documentar y comunicarme con fluidez en entornos técnicos.
-                    </p>
+                    {
+                        aboutMe.web.map((paragraph) => (
+                            <p class="text-gray-400 text-lg mb-6 leading-relaxed">{paragraph}</p>
+                        ))
+                    }
                 </div>
                 <div class="order-1 md:order-2">
                     <div class="relative">
