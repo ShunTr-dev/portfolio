@@ -93,7 +93,7 @@ export const projects = [
         cv: false,
         description: 'Aplicación web para la gestión centralizada del personal del centro de investigación CIQUS.',
         longDescription: `Ciqus Staff Database es una aplicación web de gestión de personal desarrollada para el Centro Singular de Investigación en Química Biolóxica e Materiais Moleculares (CIQUS). El sistema permite centralizar, organizar y consultar la información del personal del centro (investigadores, técnicos, administrativos, becarios, etc.) de forma estructurada, facilitando el seguimiento de la actividad, los movimientos internos y la trazabilidad de los equipos de investigación.
-        \n\nComo Full Stack Senior & Technical Lead, realicé el desarrollo completo del proyecto, incluyendo análisis funcional, diseño de arquitectura, desarrollo backend y frontend, gestión de datos jerárquicos, consultas avanzadas y despliegue. El resultado fue un sistema estable, seguro y eficiente que optimizó la gestión administrativa y el acceso a la información institucional.`,
+        \nComo Full Stack Senior & Technical Lead, realicé el desarrollo completo del proyecto, incluyendo análisis funcional, diseño de arquitectura, desarrollo backend y frontend, gestión de datos jerárquicos, consultas avanzadas y despliegue. El resultado fue un sistema estable, seguro y eficiente que optimizó la gestión administrativa y el acceso a la información institucional.`,
         image: '/img/ciqus-main.png',
         technologies: ['CakePHP', 'PostgreSQL', 'Bootstrap', 'Git', 'Plesk'],
         category: 'Gestión de Personal / Institucional',
@@ -132,7 +132,7 @@ export const projects = [
         description:
             'Plataforma tecnológica para evaluar el bienestar animal mediante datos biométricos y análisis en tiempo real.',
         longDescription: `Welfare Tracker es una plataforma tecnológica de bienestar animal que combina IoT, análisis de datos biométricos y visualización inteligente para evaluar, cuantificar y mejorar el bienestar en explotaciones ganaderas. El sistema integra sensores de campo, herramientas de auditoría y un panel web interactivo que permite a veterinarios y laboratorios monitorizar indicadores clave de salud y comportamiento animal en tiempo real.
-\n\nComo Full Stack Senior & Technical Lead, fui responsable del diseño, desarrollo y despliegue integral del sistema, incluyendo arquitectura, backend, integración IoT, dashboards interactivos y análisis estadístico. El resultado fue una plataforma robusta y escalable que mejoró la eficiencia de auditorías en más de un 53%, redujo incidentes no detectados en un 36% y centralizó toda la información biométrica en un entorno seguro y accesible desde cualquier dispositivo.`,
+\nComo Full Stack Senior & Technical Lead, fui responsable del diseño, desarrollo y despliegue integral del sistema, incluyendo arquitectura, backend, integración IoT, dashboards interactivos y análisis estadístico. El resultado fue una plataforma robusta y escalable que mejoró la eficiencia de auditorías en más de un 53%, redujo incidentes no detectados en un 36% y centralizó toda la información biométrica en un entorno seguro y accesible desde cualquier dispositivo.`,
         image: '/img/welfare-main.jpg',
         technologies: ['CakePHP', 'PostgreSQL', 'IoT', 'REST API', 'Bootstrap', 'Git', 'Plesk'],
         category: 'IoT / Data Analytics',
@@ -210,7 +210,7 @@ export const projects = [
         cv: false,
         description: 'Ecosistema SaaS para el sector hotelero: CMS, motor de reservas y PMS en la nube.',
         longDescription: `Moncake es una plataforma integral en la nube para el sector turístico y hotelero, que combina sitio web, CMS, motor de reservas y PMS (Property Management System) en una sola solución modular. Diseñada para digitalizar y automatizar la gestión hotelera, permite a los negocios turísticos controlar todo su ecosistema desde un único entorno: web corporativa, reservas, facturación, planificación, limpieza, ocupación y analítica.
-        \n\nComo Desarrollador Full Stack hice el mantenimiento y actualización del sistema durante más de siete años, incluyendo el backend en CakePHP, la creación de un CMS modular, el desarrollo de un motor de reservas multiproducto y un PMS con facturación electrónica, check-in online, control de limpieza y reporting automatizado. Moncake también integra múltiples servicios externos (Stripe, Redsys, CECA, MercadoPago, Servired, One Signal, Mailchimp) y cuenta con despliegues automatizados.`,
+        \nComo Desarrollador Full Stack hice el mantenimiento y actualización del sistema durante más de siete años, incluyendo el backend en CakePHP, la creación de un CMS modular, el desarrollo de un motor de reservas multiproducto y un PMS con facturación electrónica, check-in online, control de limpieza y reporting automatizado. Moncake también integra múltiples servicios externos (Stripe, Redsys, CECA, MercadoPago, Servired, One Signal, Mailchimp) y cuenta con despliegues automatizados.`,
         image: '/img/moncake-main.png',
         technologies: [
             'CakePHP',
@@ -266,7 +266,7 @@ export const projects = [
         description:
             'Plataforma SaaS de gestión inmobiliaria y marketing para agencias, con motor de reservas y web integrada.',
         longDescription: `Crabim es una plataforma SaaS en la nube diseñada para agencias inmobiliarias y gestores de propiedades. Centraliza la gestión completa de inmuebles, reservas, facturación y marketing en un solo entorno. Desarrollada como solución modular y multiempresa, incluye un CMS inmobiliario autogestionable, motor de reservas integrado, facturación automatizada y conexión con portales inmobiliarios y turísticos mediante APIs RESTful.
-            \n\nComo Full Stack Senior & Technical Lead, lideré la arquitectura técnica, el desarrollo backend y frontend, la integración de pasarelas de pago seguras, la lógica de negocio, la automatización de procesos contables y la implementación con despliegues sin interrupciones y alta disponibilidad.`,
+            \nComo Full Stack Senior & Technical Lead, lideré la arquitectura técnica, el desarrollo backend y frontend, la integración de pasarelas de pago seguras, la lógica de negocio, la automatización de procesos contables y la implementación con despliegues sin interrupciones y alta disponibilidad.`,
         image: '/img/crabim-main.png',
         technologies: ['CakePHP', 'PostgreSQL', 'Plesk', 'Stripe', 'REST API', 'AWS S3'],
         category: 'Inmobiliario / SaaS',
@@ -318,9 +318,9 @@ export const projects = [
         description:
             'Plataforma inteligente de gestión de productos para e-commerce con generación automática mediante IA.',
         longDescription: `Dexmate es una plataforma de automatización para e-commerce que utiliza inteligencia artificial y arquitectura cloud para crear, traducir y publicar fichas de producto de forma automática. 
-            \n\nDesarrollada con React (Next.js) y Node.js, integra generación de contenido con GPT y DALL·E, traducción automática multilingüe con DeepL API, y almacenamiento seguro en AWS S3. Incluye suscripciones y pagos mediante Stripe, despliegue serverless en Vercel y Netlify, y una base de datos escalable en MongoDB Atlas. Como Full Stack Senior / Technical Lead, diseñé y desarrollé toda la arquitectura, priorizando rendimiento, accesibilidad y automatización.`,
+            \nDesarrollada con React y Node.js, integra generación de contenido con GPT y DALL·E, traducción automática multilingüe con DeepL API, y almacenamiento seguro en AWS S3. Incluye suscripciones y pagos mediante Stripe, despliegue serverless en Vercel y Netlify, y una base de datos escalable en MongoDB Atlas. Como Full Stack Senior / Technical Lead, diseñé y desarrollé toda la arquitectura, priorizando rendimiento, accesibilidad y automatización.`,
         image: '/img/dexmate-main.webp',
-        technologies: ['React', 'Next.js', 'Node.js', 'MongoDB', 'AWS S3', 'DeepL API', 'Stripe', 'ChatGPT', 'DALL·E'],
+        technologies: ['React', 'Node.js', 'MongoDB', 'AWS S3', 'DeepL API', 'Stripe', 'ChatGPT', 'DALL·E'],
         category: 'E-commerce / IA / Automatización',
         features: [
             'Generación automática de fichas de producto con IA (GPT + DALL·E)',
@@ -368,7 +368,7 @@ export const projects = [
         description:
             'Plataforma de auditoría web automática que analiza rendimiento, accesibilidad, SEO y seguridad de cualquier sitio web.',
         longDescription: `Tu Web a Juicio! es una herramienta avanzada de análisis y diagnóstico web que ejecuta más de 300 pruebas automáticas sobre una URL. Combina datos de W3C Validator, Google PageSpeed Insights y Lighthouse para evaluar el rendimiento, la accesibilidad, el SEO y la seguridad de un sitio.
-            \n\nDesarrollé el sistema completo —backend, frontend y arquitectura cloud— integrando orquestación de APIs, ejecución paralela de auditorías y generación de informes visuales con métricas detalladas y recomendaciones técnicas.`,
+            \nDesarrollé el sistema completo —backend, frontend y arquitectura cloud— integrando orquestación de APIs, ejecución paralela de auditorías y generación de informes visuales con métricas detalladas y recomendaciones técnicas.`,
         image: '/img/tu-web-a-juicio-main.png',
         technologies: [
             'React',
@@ -379,6 +379,7 @@ export const projects = [
             'PageSpeed API',
             'W3C Validator',
             'Puppeteer',
+            'Tailwind CSS',
         ],
         category: 'Auditoría / Automatización Web',
         features: [
@@ -420,5 +421,86 @@ export const projects = [
             '/img/tu-web-a-juicio-9.png',
             '/img/tu-web-a-juicio-10.png',
         ],
+    },
+    {
+        id: 'teujob',
+        title: 'TeuJob',
+        description:
+            'Portal de empleo que conecta empresas con titulados universitarios y FP en Galicia, permitiendo a los candidatos inscribirse y enviar su CV de forma centralizada.',
+        longDescription: `TeuJob es el mayor portal de empleo de Galicia para titulados universitarios y de Formación Profesional. La plataforma permite a los candidatos crear perfiles completos, subir su CV, inscribirse en ofertas y recibir notificaciones. Las empresas pueden publicar vacantes, gestionar candidatos y recibir solicitudes filtradas por criterios profesionales. El sistema fue desarrollado con enfoque en seguridad, accesibilidad y gestión masiva de ofertas e inscripciones.
+        \nComo Desarrollador Full Stack hice el mantenimiento, actualización del sistema y desarrollo de nuevas funcionalidades.`,
+        image: '/img/teujob-main.jpg',
+        technologies: ['Laravel', 'PostgreSQL', 'Voyager', 'Git'],
+        category: 'Portal de Empleo / Gestión de Candidatos',
+        demoUrl: 'https://www.teujob.es/',
+        githubUrl: null,
+        features: [
+            'Registro de candidatos y subida de CV',
+            'Buscador avanzado de ofertas por sector, provincia y tipo de contrato',
+            'Gestión para empresas: publicación, edición y seguimiento de ofertas',
+            'Alertas de nuevas ofertas y notificaciones por email',
+            'Panel de administración con estadísticas e informes',
+            'Diseño responsive orientado a accesibilidad',
+        ],
+        challenges: [
+            'Optimización del rendimiento con gran volumen de candidatos y ofertas',
+            'Sistemas de filtrado avanzado y búsqueda multicriterio',
+            'Desarrollo de paneles separados para candidatos, empresas y administradores',
+        ],
+        gallery: ['/img/teujob-1.png', '/img/teujob-2.png'],
+    },
+    {
+        id: 'xouva-boats',
+        title: 'Xouva Boats',
+        description:
+            'Sistema web para la gestión y promoción de la embarcación eléctrica Xouva 4.90: reservas, características técnicas, rutas y contacto.',
+        longDescription: `Xouva Boats es la plataforma digital de la Xouva 4.90, una embarcación eléctrica. El sitio ofrece información comercial. Desarrollado con foco en rendimiento, SEO y diseño orientado a marca.
+            \nComo Full Stack Senior & Technical Lead, lideré la arquitectura técnica, el desarrollo backend y frontend`,
+        image: '/img/xouva-boats-main.png',
+        technologies: ['Laravel', 'PostgreSQL', 'Voyager', 'Git'],
+        category: 'Web Corporativa / Promoción Comercial',
+        demoUrl: 'https://www.xouvaboats.com/',
+        githubUrl: null,
+        features: [
+            'Gestión de contenido dinámico: textos, imágenes y ficha técnica',
+            'Sistema de solicitudes de reserva y contacto',
+            'Optimización SEO para posicionamiento internacional',
+            'Diseño responsive enfocado en marca premium',
+            'Integración con galería multimedia y fichas técnicas descargables',
+            'Panel de administración para gestión de consultas',
+        ],
+        challenges: [
+            'Optimización SEO en varios idiomas',
+            'Diseño visual alineado a identidad de marca y sector náutico',
+            'Gestión segura de formularios y panel administrativo',
+        ],
+        gallery: ['/img/xouva-boats-1.png'],
+    },
+    {
+        id: 'fitting-pup',
+        title: 'Fittingpup',
+        description:
+            'Sistema de monitorización y análisis de datos para la salud de mascotas, con panel web, visualización y almacenamiento en la nube.',
+        longDescription: `Fittingpup es una plataforma digital orientada al bienestar animal, capaz de recoger, procesar y visualizar datos asociados a la salud de mascotas. El sistema integra una base de datos en la nube, panel de administración, análisis de métricas, histórico de actividades y visualización gráfica.
+            \nComo Desarrollador Full Stack hice el mantenimiento, actualización del sistema y desarrollo de nuevas funcionalidades como la captación de datos desde dispositivos, muestreo de datos, gestión de usuarios y generación de informes.`,
+        image: '/img/fitting-pup-main.png',
+        technologies: ['Moncake', 'CakePHP', 'MySQL', 'Git', 'REST API', 'IOT'],
+        category: 'Plataforma / SaaS / IoT',
+        demoUrl: null,
+        githubUrl: null,
+        features: [
+            'Panel web con login, roles y permisos',
+            'Monitorización de métricas y datos biométricos',
+            'Base de datos en la nube con histórico y gestión de usuarios',
+            'Dashboard con gráficas analíticas y comparativas',
+            'API de recolección de datos e integración con sensores externos',
+            'Sistema de alertas y notificaciones',
+        ],
+        challenges: [
+            'Diseño de una arquitectura escalable para recibir grandes volúmenes de datos',
+            'Normalización y visualización clara de información biométrica',
+            'Seguridad y protección de datos sensibles',
+        ],
+        gallery: [],
     },
 ]
